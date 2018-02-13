@@ -137,6 +137,7 @@ function helmJobRunner (config, h, prodWeight, canaryWeight, deployType) {
 }
 
 function slackJob (s, webhook, message) {
+    console.log("Entered slackJob in brigade pipline.")
     s.storage.enabled = false
     s.env = {
       SLACK_WEBHOOK: webhook,
