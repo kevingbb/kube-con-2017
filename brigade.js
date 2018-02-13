@@ -94,6 +94,7 @@ events.on("after", (event, proj) => {
 })
 
 function goJobRunner(g) {
+    console.log("Entered goJobRunner in brigade pipline.")
     // define job for golang work
     g.storage.enabled = false
     g.image = "golang:1.7.5"
@@ -106,6 +107,7 @@ function goJobRunner(g) {
 }
 
 function dockerJobRunner(config, d) {
+    console.log("Entered dockerJobRunner in brigade pipline.")
     d.storage.enabled = false
     d.image = "chzbrgr71/dnd:v5"
     d.privileged = true
@@ -124,6 +126,7 @@ function dockerJobRunner(config, d) {
 }
 
 function helmJobRunner (config, h, prodWeight, canaryWeight, deployType) {
+    console.log("Entered helmJobRunner in brigade pipline.")
     h.storage.enabled = false
     h.image = "lachlanevenson/k8s-helm:2.7.0"
     h.tasks = [
