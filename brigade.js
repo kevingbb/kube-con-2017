@@ -79,7 +79,7 @@ events.on("pull_request", (brigadeEvent, project) => {
 })
 
 events.on("after", (event, proj) => {
-    console.log("After event, brigade pipeline finished successfully")
+    console.log("After event fired, brigade pipeline finished successfully")
 
     // var slack = new Job("slack-notify", "technosophos/slack-notify:latest", ["/slack-notify"])
     // slack.storage.enabled = false
