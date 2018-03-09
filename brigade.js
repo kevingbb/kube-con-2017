@@ -1,8 +1,8 @@
-const { events, Job, Group } = require('brigadier')
+const { events, Job, Group } = require('brigadier');
 
 events.on("push", (brigadeEvent, project) => {
-    console.log("received push for commit " + brigadeEvent)
-    console.log("received push for commit " + brigadeEvent.payload)
+    console.log("received push for commit " + brigadeEvent.commit)
+    console.log("Payload" + brigadeEvent.payload)
     
     // setup variables
     var gitPayload = JSON.parse(brigadeEvent.payload)
